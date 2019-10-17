@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import ru.shuffleattractors.R
 
-class MainFragment : Fragment() {
+class OutputFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = OutputFragment()
     }
 
     private lateinit var viewModel: MainViewModel

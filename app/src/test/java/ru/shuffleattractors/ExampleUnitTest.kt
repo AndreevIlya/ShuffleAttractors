@@ -3,6 +3,7 @@ package ru.shuffleattractors
 import org.junit.Test
 
 import org.junit.Assert.*
+import ru.shuffleattractors.domain.entities.ShuffleDatum
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -11,7 +12,9 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun shuffleOutputGeneration() {
+        val datum = ShuffleDatum(100000,4,arrayOf(5,10,0,5))
+        for(o in datum.output)
+        print("$o, ")
     }
 }
