@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
                     .replace(R.id.container, OutputFragment.newInstance())
                     .commitNow()
         }
+        (application as App).realm
     }
 
 }
