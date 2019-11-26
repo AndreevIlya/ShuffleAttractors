@@ -4,12 +4,12 @@ import io.realm.RealmModel
 import io.realm.annotations.RealmClass
 
 @RealmClass
-open class OutputRealmData() : RealmModel {
+open class ResultRealm() : RealmModel {
 
-    private lateinit var command: CommandRealmData
+    private lateinit var command: CommandRealm
     private lateinit var result: String
 
-    constructor(command: CommandRealmData, output: String): this(){
+    constructor(command: CommandRealm, output: String): this(){
         this.command = command
         result = output
     }

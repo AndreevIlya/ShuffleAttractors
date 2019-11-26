@@ -6,7 +6,7 @@ import io.realm.annotations.RealmClass
 import ru.shuffleattractors.domain.entities.CommandEntity
 
 @RealmClass
-open class CommandRealmData(): RealmModel {
+open class CommandRealm(): RealmModel {
     var iterationsCount: Int = 0
     var countModified: Int = 0
     var computerType: String? = null

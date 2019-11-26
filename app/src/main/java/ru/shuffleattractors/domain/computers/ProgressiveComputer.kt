@@ -2,12 +2,13 @@ package ru.shuffleattractors.domain.computers
 
 import ru.shuffleattractors.domain.entities.CommandEntity
 import ru.shuffleattractors.domain.entities.CommandEntity.Companion.DIMENSION
+import ru.shuffleattractors.domain.entities.ResultEntity
 
 class ProgressiveComputer(
     private val input: CommandEntity
 ): ComputerInitializer(input), Computer {
 
-    override fun computeResult(): Array<Int> {
+    override fun computeResult(): ResultEntity {
         val out = initArray()
         val initSum = out.sum()
         for (i in 0 until input.iterationsCount) {
@@ -21,6 +22,6 @@ class ProgressiveComputer(
                 }
             }
         }
-        return out
+        return ResultEntity(out)
     }
 }
