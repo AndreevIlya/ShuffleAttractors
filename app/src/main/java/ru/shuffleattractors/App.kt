@@ -24,4 +24,9 @@ class App: Application() {
             .build()
         appComponent.inject(this)
     }
+
+    override fun onTerminate() {
+        super.onTerminate()
+        realm.close()
+    }
 }

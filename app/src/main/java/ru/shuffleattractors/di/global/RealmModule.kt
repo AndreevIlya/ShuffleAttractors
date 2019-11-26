@@ -5,6 +5,7 @@ import dagger.Module
 import dagger.Provides
 import io.realm.Realm
 import io.realm.RealmConfiguration
+import ru.shuffleattractors.data.databases.RealmImpl
 import javax.inject.Singleton
 
 @Module
@@ -26,5 +27,11 @@ class RealmModule {
     fun provideRealm(context: Application, config: RealmConfiguration): Realm {
         Realm.init(context)
         return Realm.getInstance(config)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRealmImpl(realm: Realm): RealmImpl {
+        return RealmImpl(realm)
     }
 }
