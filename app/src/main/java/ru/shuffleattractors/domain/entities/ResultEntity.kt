@@ -15,4 +15,14 @@ data class ResultEntity(val result: Array<Int>) {
     override fun hashCode(): Int {
         return result.contentHashCode()
     }
+
+    companion object{
+        fun mergeResults(result1: ResultEntity,result2: ResultEntity): ResultEntity{
+            return ResultEntity(
+                Array(CommandEntity.DIMENSION) {
+                        i -> result1.result[i] + result2.result[i]
+                }
+            )
+        }
+    }
 }
